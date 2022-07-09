@@ -12,6 +12,7 @@ import LockButton from "./components/LockButton";
 import LaptopLanding from "./components/LaptopLanding";
 import Starting from "./components/Starting";
 import MobileLanding from "./pages/MobileLanding";
+import MobileAuth from "./pages/MobileAuth";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Starting />} />
           <Route path="/laptop" element={<LaptopLanding />} />
           <Route path="/mobile" element={<MobileLanding />} />
+          <Route path="mobile-auth" element={<MobileAuth />} />
         </Routes>
       </Router>
     </div>
