@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Button, CircularProgress, TextField } from "@mui/material";
-import Header from "../components/Header";
 
 const MobileLanding = () => {
   const [loading, setLoading] = React.useState(false);
@@ -13,7 +12,6 @@ const MobileLanding = () => {
   };
   return (
     <>
-        <Header />
         <Box sx={{ marginTop: "25vh" }}>
           <TextField
             type="number"

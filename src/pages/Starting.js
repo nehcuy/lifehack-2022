@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import Header from "../components/Header";
 
 const Starting = () => {
   const enterLaptop = () => {
@@ -11,7 +10,6 @@ const Starting = () => {
   };
   return (
     <>
-      <Header />
       <Box sx={{ marginTop: "25vh" }}>
         <Typography sx={{ fontSize: "14pt", marginBottom:"1%" }}>
           What device are you on?
