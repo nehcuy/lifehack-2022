@@ -6,11 +6,21 @@ const getMoved = async () => {
   const response = await fetch(
     url + "/moveStatus/" + JSON.parse(localStorage.getItem("phone"))._id,
     async (req, res) => {
-      try {
-      } catch (e) {}
+      return res; // should be boolean for mooved status
     }
   );
 };
+
+var myInterval = setInterval(function () {
+  const moved = getMoved();
+  if (moved) {
+    // ding away
+  } else {
+    // do not ding, continue repeating
+  }
+}, 5000);
+
+// clearInterval(myInterval)  //if you ever want to stpo the interval
 
 const MobileAuth = () => {
   const [locked, setLocked] = React.useState(false);
