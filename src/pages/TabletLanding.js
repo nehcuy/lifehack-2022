@@ -17,9 +17,27 @@ const makeCode = async (code) => {
   }
   const data = await response.json();
   return data;
-}
+};
 
 const TabletLanding = () => {
+  // Check for device motion
+  if (
+    typeof DeviceMotionEvent !== "undefined" &&
+    typeof DeviceMotionEvent.requestPermission === "function"
+  ) {
+    DeviceMotionEvent.requestPermission()
+      .then((response) => {
+        // (optional) Do something after API prompt dismissed.
+        if (response === "granted") {
+          window.addEventListener("devicemotion", (e) => {
+            // do something for 'e' here.
+            console.log(e);
+            console.log("Motion detected!");
+          });
+        }
+      })
+      .catch(console.error);
+  }
   // Generates 4 digit code for the phone
   let code = Math.floor(Math.random() * 10000);
   if (code < 1000) {
