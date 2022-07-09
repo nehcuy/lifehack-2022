@@ -35,6 +35,7 @@ const setMove = async () => {
   });
   const data = await response.json(); //updated laptop
   localStorage.setItem("laptop", JSON.stringify(data));
+  console.log("New data", JSON.parse(localStorage.getItem("laptop")).laptop.moved);
 };
 
 const TabletLanding = () => {
