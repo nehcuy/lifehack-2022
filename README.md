@@ -35,11 +35,13 @@ Upon entering the startup screen, choose the device you are on (either a tablet 
 
 ### **<ins>Phone</ins>**
 
-Enter the 4 digit code that is shown on the tablet and click&nbsp;`SUBMIT`. You will then enter the [Lockdown Page](#lockdown-page).
+Enter the 4 digit code that is shown on the tablet and click&nbsp;`SUBMIT`. You will see a large text box which displays the state the tablet is in (locked down or unlocked).
 
 ### **<ins>Tablet</ins>**
 
-The 4 digit code shown on the screen is to be entered onto your mobile phone and the tablet is now connected to your phone.
+The 4 digit code shown on the screen is to be entered onto your mobile phone. Once a connection is established, you will then enter the [Lockdown Page](#lockdown-page).
+
+
 
 ## **Lockdown Page**
 
@@ -49,3 +51,7 @@ This will be the main page where a SINGLE BUTTON is all it takes to put your tab
 *   Damage to the tablet&nbsp;
 
 and you are able to stay informed, even if you are away from your tablet!
+
+## Areas of Improvement
+
+Our previous idea was to keep laptops safe as people tend to leave their laptops sitting on the table while they take short breaks (i.e. short trip to the toilet, purchase drinks). However, our progress was immediately stunted due to the absence of the movement sensor in laptops. We then had to implement it between mobile phones and tablets instead.
