@@ -33,11 +33,11 @@ Upon entering the startup screen, choose the device you are on (either a tablet 
 1.  [Phone](#phone)
 2.  [Tablet](#tablet)
 
-### **Phone**
+### **<ins>Phone</ins>**
 
 Enter the 4 digit code that is shown on the tablet and click&nbsp;`SUBMIT`. You will then enter the [Lockdown Page](#lockdown-page).
 
-### **Tablet**
+### **<ins>Tablet</ins>**
 
 The 4 digit code shown on the screen is to be entered onto your mobile phone and the tablet is now connected to your phone.
 
