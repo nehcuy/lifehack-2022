@@ -31,7 +31,7 @@ const motionDetection = () => {
         if (response === "granted") {
           window.addEventListener("devicemotion", (e) => {
             console.log(e);
-            console.log("Motion detected!");
+            console.log(new Date().toTimeString());
           });
         }
       })
