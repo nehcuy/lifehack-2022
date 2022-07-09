@@ -7,7 +7,7 @@ const MobileAuth = () => {
     <>
       <Box sx={{ marginTop: "25vh" }}>
         <Typography sx={{ fontSize: "11pt", color: "black" }}>
-          YOUR LAPTOP IS CURRENTLY
+          YOUR TABLET IS CURRENTLY
         </Typography>
         <Button
           disabled

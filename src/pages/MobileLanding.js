@@ -6,11 +6,20 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import url from "../utils/url";
 
 const MobileLanding = () => {
   const [loading, setLoading] = React.useState(false);
   const onSubmit = () => {
     setLoading(true);
+    const response = await fetch(url + "/connect/newPhone/1234", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json(); // data is the new phone object
+    localStorage.setItem("phone", JSON.stringify(data));
     window.location.href = "/mobile-auth";
   };
   const onGoBack = () => {
