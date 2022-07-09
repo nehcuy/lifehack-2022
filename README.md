@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# LifeHack 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Hackathon Project from LifeHack 2022. Access our WebApp `LockDown` [here](https://lifehack2022-lockdown.vercel.app/)
 
-## Available Scripts
+Contents:
+- [Problem Statement](#problem-statement)
+- [Rationale](#rationale)
+- [Process](#process)
 
-In the project directory, you can run:
+## Problem Statement
 
-### `npm start`
+Safety: How can we ensure the safety of our personal property (money/e-banking, data, personal belongings, assets, residences, community spaces etc.)?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Rationale
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Drawing inspiration from existing applications that already provide alert messages for mobile phone movement, we decided to take it a step further. By connecting a mobile phone to a tablet, we can now keep our tablets (which contain lots of personal information) safe from theft. Once in lockdown mode, any movements detected by the tablet will send an alert to the mobile user that is connected to the tablet through a 4 digit code.
 
-### `npm test`
+## Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Upon entering the startup screen, choose the device you are on (either a tablet or a mobile phone). Depending on which option you select, you will be brought to two pages:
+- [Phone](#phone)
+- [Tablet](#tablet)
 
-### `npm run build`
+### Phone
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enter the 4 digit code that is shown on the tablet and click `SUBMIT`. You will then enter the [LockDown Page](#lockdown-page).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tablet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The 4 digit code shown on the screen is to be entered onto your mobile phone and the tablet is now connected to your phone.
 
-### `npm run eject`
+## LockDown Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This will be the main page where a SINGLE BUTTON is all it takes to put your tablet device on "lockdown". After which, any external movements sensed by the built-in device gyroscope will send an alert to the mobile phone which was used to activate lockdown mode on the tablet. This movement will simulate possible events of:
+- Theft
+- Damage to the tablet
+and you are able to stay informed, even if you are away from your tablet!
