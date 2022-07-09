@@ -23,9 +23,7 @@ const makeCode = async (code) => {
 };
 
 const setMove = async () => {
-  const laptop = JSON.parse(localStorage.getItem("laptop"));
-  console.log(laptop);
-  console.log(laptop.laptop._id);
+  const laptop = JSON.parse(localStorage.getItem("laptop")).laptop;
   laptop.moved = true;
   const response = await fetch(url + "/connect/updateLaptop", {
     method: "PATCH",
