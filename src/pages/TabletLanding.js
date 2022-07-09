@@ -35,12 +35,11 @@ const motionDetection = () => {
                 Math.pow(e.acceleration.y, 2) +
                 Math.pow(e.acceleration.z, 2)
             );
-            console.log(
-              "Acceleration of device is:",
-              acc,
-              " at time:",
-              e.timeStamp
-            );
+            if (acc > 6) {
+              console.log(
+                "Rapid movement detected at " + new Date().toTimeString()
+              );
+            }
           });
         }
       })
