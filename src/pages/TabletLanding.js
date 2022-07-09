@@ -31,7 +31,7 @@ const setMove = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: laptop,
+    body: laptop.moved,
   });
   const data = await response.json(); //updated laptop
   localStorage.setItem("laptop", JSON.stringify(data));
