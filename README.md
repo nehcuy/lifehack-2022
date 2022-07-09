@@ -8,9 +8,9 @@ A Hackathon Project from LifeHack 2022. Access our WebApp&nbsp;`Lockdown`&nbsp;[
 
 Contents:
 
-*   [Problem Statement](https://github.com/nehcuy/lifehack-2022#problem-statement)
-*   [Rationale](https://github.com/nehcuy/lifehack-2022#rationale)
-*   [Process](https://github.com/nehcuy/lifehack-2022#process)
+*   [Problem Statement](#problem-statement)
+*   [Rationale](#rationale)
+*   [Process](#process)
 
 ## **Problem Statement**
 
@@ -30,12 +30,12 @@ Once in lockdown mode, any movements detected by the tablet will send an alert t
 
 Upon entering the startup screen, choose the device you are on (either a tablet or a mobile phone). Depending on which option you select, you will be brought to two pages:
 
-1.  [Phone](https://github.com/nehcuy/lifehack-2022#phone)
-2.  [Tablet](https://github.com/nehcuy/lifehack-2022#tablet)
+1.  [Phone](#phone)
+2.  [Tablet](#tablet)
 
 ### **Phone**
 
-Enter the 4 digit code that is shown on the tablet and click&nbsp;`SUBMIT`. You will then enter the [Lockdown Page](https://github.com/nehcuy/lifehack-2022#lockdown-page).
+Enter the 4 digit code that is shown on the tablet and click&nbsp;`SUBMIT`. You will then enter the [Lockdown Page](#lockdown-page).
 
 ### **Tablet**
 
