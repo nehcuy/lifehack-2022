@@ -24,8 +24,9 @@ const makeCode = async (code) => {
 
 const setMove = async () => {
   const laptop = JSON.parse(localStorage.getItem("laptop"));
+  console.log(laptop);
   laptop.moved = true;
-  const response = await fetch(url + "/updateLaptop", {
+  const response = await fetch(url + "/connect/updateLaptop", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -37,6 +38,7 @@ const setMove = async () => {
 };
 
 const TabletLanding = () => {
+  localStorage.clear();
   // Sound generator when movement is detected
   const [ding] = useSound(dingSound);
 
@@ -74,10 +76,11 @@ const TabletLanding = () => {
                   Math.pow(e.acceleration.z, 2)
               );
               if (acc > 6) {
-                console.log(
-                  "Rapid movement detected at " + new Date().toTimeString()
-                );
+                // console.log(
+                //   "Rapid movement detected at " + new Date().toTimeString()
+                // );
                 ding();
+                setMove();
               }
             });
           }
