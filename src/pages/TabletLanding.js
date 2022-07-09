@@ -30,12 +30,17 @@ const motionDetection = () => {
         // (optional) Do something after API prompt dismissed.
         if (response === "granted") {
           window.addEventListener("devicemotion", (e) => {
-            console.log(e);
-            console.log(e.acceleration);
-            console.log("x", e.acceleration.x);
-            console.log("y", e.acceleration.y);
-            console.log("z", e.acceleration.z);
-            console.log(new Date().toTimeString());
+            const acc = Math.sqrt(
+              Math.pow(e.acceleration.x, 2) +
+                Math.pow(e.acceleration.y, 2) +
+                Math.pow(e.acceleration.z, 2)
+            );
+            console.log(
+              "Acceleration of device is:",
+              acc,
+              " at time:",
+              e.timeStamp
+            );
           });
         }
       })
