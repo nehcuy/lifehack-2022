@@ -3,10 +3,10 @@ import { Box, Button, Typography } from "@mui/material";
 
 const Starting = () => {
   const enterLaptop = () => {
-    window.location.href = "/Laptop";
+    window.location.href = "/tablet";
   };
   const enterMobile = () => {
-    window.location.href = "/Mobile";
+    window.location.href = "/mobile";
   };
   return (
     <>
@@ -38,7 +38,7 @@ const Starting = () => {
           }}
         >
           <Typography sx={{ fontSize: "18pt", color: "white" }}>
-            Laptop
+            Tablet
           </Typography>
         </Button>
       </Box>
