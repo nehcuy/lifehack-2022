@@ -19,8 +19,8 @@ const makeCode = async (code) => {
   return data;
 };
 
-const TabletLanding = () => {
-  // Check for device motion
+// Check for device motion
+const motionDetection = () => {
   if (
     typeof DeviceMotionEvent !== "undefined" &&
     typeof DeviceMotionEvent.requestPermission === "function"
@@ -30,7 +30,6 @@ const TabletLanding = () => {
         // (optional) Do something after API prompt dismissed.
         if (response === "granted") {
           window.addEventListener("devicemotion", (e) => {
-            // do something for 'e' here.
             console.log(e);
             console.log("Motion detected!");
           });
@@ -38,6 +37,9 @@ const TabletLanding = () => {
       })
       .catch(console.error);
   }
+};
+
+const TabletLanding = () => {
   // Generates 4 digit code for the phone
   let code = Math.floor(Math.random() * 10000);
   if (code < 1000) {
@@ -57,6 +59,19 @@ const TabletLanding = () => {
         <Typography sx={{ fontSize: "44pt", color: "black" }}>
           {code}
         </Typography>
+        <Button
+          disableElevation
+          variant="contained"
+          color="primary"
+          onClick={motionDetection}
+          sx={{
+            backgroundColor: "#ff3838",
+            color: "white",
+            margin: "1vh",
+          }}
+        >
+          Begin Detecting Motion
+        </Button>
         <Button
           disableElevation
           variant="contained"
