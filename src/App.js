@@ -9,8 +9,8 @@ import {
 import "./App.css";
 import Header from "./components/Header";
 import LockButton from "./components/LockButton";
-import LaptopLanding from "./components/LaptopLanding";
-import Starting from "./components/Starting";
+import LaptopLanding from "./pages/LaptopLanding";
+import Starting from "./pages/Starting";
 import MobileLanding from "./pages/MobileLanding";
 import MobileAuth from "./pages/MobileAuth";
 
