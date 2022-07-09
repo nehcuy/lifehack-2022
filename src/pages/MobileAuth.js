@@ -14,7 +14,7 @@ const MobileAuth = () => {
           sx={{
             width: 200,
             height: 80,
-            margin: "5%",
+            margin: "2%",
             "&.Mui-disabled": {
               backgroundColor: locked ? "#ff3838" : "#23c4b6",
             },
