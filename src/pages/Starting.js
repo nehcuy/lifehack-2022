@@ -12,7 +12,7 @@ const Starting = () => {
     <>
       <Box sx={{ marginTop: "25vh" }}>
         <Typography sx={{ fontSize: "14pt", marginBottom:"1%" }}>
-          What device are you on?
+          Which device is this? 
         </Typography>
         <Button
           onClick={enterMobile}
