@@ -18,7 +18,22 @@ const makeCode = async (code) => {
     throw Error;
   }
   const data = await response.json();
+  localStorage.setItem("laptop", JSON.stringify(data));
   return data;
+};
+
+const setMove = async () => {
+  const laptop = JSON.parse(localStorage.getItem("laptop"));
+  laptop.moved = true;
+  const response = await fetch(url + "/updateLaptop", {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: laptop,
+  });
+  const data = await response.json(); //updated laptop
+  localStorage.setItem("laptop", JSON.stringify(data));
 };
 
 const TabletLanding = () => {
@@ -31,7 +46,7 @@ const TabletLanding = () => {
     code += 1000; // For floats below 0.1
   }
   makeCode(code);
-  
+
   // Back button
   const onGoBack = () => {
     window.location.href = "/";

@@ -1,5 +1,16 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
+import url from "../utils/url";
+
+const getMoved = async () => {
+  const response = await fetch(
+    url + "/moveStatus/" + JSON.parse(localStorage.getItem("phone"))._id,
+    async (req, res) => {
+      try {
+      } catch (e) {}
+    }
+  );
+};
 
 const MobileAuth = () => {
   const [locked, setLocked] = React.useState(false);
