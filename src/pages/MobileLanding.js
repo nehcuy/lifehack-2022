@@ -10,7 +10,7 @@ import url from "../utils/url";
 
 const MobileLanding = () => {
   const [loading, setLoading] = React.useState(false);
-  const onSubmit = () => {
+  const onSubmit = async () => {
     setLoading(true);
     const response = await fetch(url + "/connect/newPhone/1234", {
       method: "GET",
@@ -28,7 +28,15 @@ const MobileLanding = () => {
   return (
     <>
       <Box sx={{ marginTop: "25vh" }}>
-        <Typography sx={{ fontSize: "12pt", color: "black", marginLeft:"10%", marginRight:"10%", marginBottom: "2%" }}>
+        <Typography
+          sx={{
+            fontSize: "12pt",
+            color: "black",
+            marginLeft: "10%",
+            marginRight: "10%",
+            marginBottom: "2%",
+          }}
+        >
           Please enter your authentication code to continue.
         </Typography>
         <TextField
