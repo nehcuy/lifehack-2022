@@ -5,7 +5,7 @@ const LaptopLanding = () => {
   return (
     <>
       <Header />
-      <h1>Enter the 4 digit code</h1>
+      <h1>Enter this 4 digit code onto your phone</h1>
     </>
   );
 }
