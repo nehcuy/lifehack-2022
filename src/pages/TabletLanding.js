@@ -30,7 +30,7 @@ const TabletLanding = () => {
   if (code < 1000) {
     code += 1000; // For floats below 0.1
   }
-  makeCode(code);
+
   // Back button
   const onGoBack = () => {
     window.location.href = "/";
@@ -42,6 +42,7 @@ const TabletLanding = () => {
   // Check for device motion
   const motionDetection = () => {
     setGenerateCode(true);
+    makeCode(code);
     if (
       typeof DeviceMotionEvent !== "undefined" &&
       typeof DeviceMotionEvent.requestPermission === "function"
