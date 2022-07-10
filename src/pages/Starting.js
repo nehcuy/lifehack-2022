@@ -8,6 +8,7 @@ const Starting = () => {
   const enterMobile = () => {
     window.location.href = "/mobile";
   };
+  localStorage.clear();
   return (
     <>
       <Box sx={{ marginTop: "25vh" }}>
