@@ -38,6 +38,7 @@ const MobileAuth = () => {
         ding();
       } else {
         // do not ding, continue repeating
+        setIsTabletSafe(true);
       }
     });
   }, 5000);

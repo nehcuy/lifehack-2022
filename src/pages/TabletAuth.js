@@ -4,14 +4,14 @@ import { Box, Button, Typography } from "@mui/material";
 import dingSound from "../utils/ding.mp3";
 import url from "../utils/url";
 
-const setMove = async () => {
+const setMove = async (movement) => {
   const laptop =
     JSON.parse(localStorage.getItem("laptop")).laptop ||
     JSON.parse(localStorage.getItem("laptop"));
   const newLaptop = {
     code: laptop.code,
     phone: null,
-    moved: true,
+    moved: movement,
     _id: laptop._id,
   };
   console.log(newLaptop);
@@ -40,7 +40,6 @@ const TabletAuth = () => {
 
   const handleClick = () => {
     setIsLocked(!isLocked);
-    setMove(); // Temporary
     if (isLocked) {
       motionDetection();
     }
@@ -67,7 +66,9 @@ const TabletAuth = () => {
                 //   "Rapid movement detected at " + new Date().toTimeString()
                 // );
                 ding();
-                setMove();
+                setMove(true);
+              } else {
+                setMove(false);
               }
             });
           }
