@@ -55,3 +55,5 @@ and you are able to stay informed, even if you are away from your tablet!
 ## Areas of Improvement
 
 Our previous idea was to keep laptops safe as people tend to leave their laptops sitting on the table while they take short breaks (i.e. short trip to the toilet, purchase drinks). However, our progress was immediately stunted due to the absence of the movement sensor in laptops. We then had to implement it between mobile phones and tablets instead.
+
+There is also a lack of security as the application window needs to remain open and others may be able to switch the alarm off on the tablet device.
