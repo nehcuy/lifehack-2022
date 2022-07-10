@@ -5,13 +5,16 @@ import dingSound from "../utils/ding.mp3";
 import url from "../utils/url";
 
 const setMove = async () => {
-  const laptop = JSON.parse(localStorage.getItem("laptop"));
+  const laptop =
+    JSON.parse(localStorage.getItem("laptop")).laptop ||
+    JSON.parse(localStorage.getItem("laptop"));
   const newLaptop = {
     code: laptop.code,
     phone: null,
     moved: true,
     _id: laptop._id,
   };
+  console.log(newLaptop);
   const response = await fetch(url + "/connect/updateLaptop", {
     method: "PATCH",
     headers: {
@@ -19,7 +22,7 @@ const setMove = async () => {
     },
     body: JSON.stringify(newLaptop),
   });
-  const data = await response.json(); //updated laptop
+  const data = await response.json(); // updated laptop
   localStorage.setItem("laptop", JSON.stringify(data));
   console.log("New data", JSON.parse(localStorage.getItem("laptop")).moved);
 };
