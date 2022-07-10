@@ -40,11 +40,15 @@ const TabletLanding = () => {
   return (
     <>
       <Box sx={{ marginTop: "20vh" }}>
-        <Typography sx={{ fontSize: "16pt", color: "black" }}>
+        <Typography sx={{ fontSize: "16pt", color: "black", margin: "2%" }}>
           Enter this 4 digit code onto your phone:
         </Typography>
         <Typography sx={{ fontSize: "44pt", color: "black" }}>
           {code}
+        </Typography>
+        <Typography sx={{ margin: "2%", marginLeft: "8%", marginRight: "8%" }}>
+          Press the 'Next' button below to continue after you have entered the
+          code.
         </Typography>
         <div>
           <Button

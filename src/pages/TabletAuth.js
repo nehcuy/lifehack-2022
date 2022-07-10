@@ -80,17 +80,35 @@ const TabletAuth = () => {
   return (
     <>
       <Box sx={{ marginTop: "20vh" }}>
-        <Typography sx={{ fontSize: "14pt", color: "black" }}>
+        <Typography
+          sx={{
+            fontSize: "14pt",
+            color: "black",
+            marginLeft: "8%",
+            marginRight: "8%",
+          }}
+        >
           Your tablet is currently {isLocked ? "" : "NOT"} tracking movement.
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "12pt",
+            marginTop: "6%",
+            marginLeft: "8%",
+            marginRight: "8%",
+          }}
+        >
+          Press the button below to toggle between modes.
         </Typography>
         <Button
           sx={{
             margin: "2%",
             width: 200,
             height: 80,
-            bgcolor: isLocked ? "#ff3838" : "#5596e6",
+            backgroundColor: isLocked ? "#ff3838" : "#5596e6",
             "&:hover": {
-              bgcolor: isLocked ? "#5596e6" : "#ff3838",
+              //you want this to be the same as the backgroundColor above
+              backgroundColor: isLocked ? "#ff3838" : "#5596e6",
             },
           }}
           onClick={handleClick}
