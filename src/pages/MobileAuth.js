@@ -41,7 +41,7 @@ const MobileAuth = () => {
         setIsTabletSafe(true);
       }
     });
-  }, 5000);
+  }, 2000);
 
   // Back button
   const onGoBack = () => {
