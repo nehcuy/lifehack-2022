@@ -5,15 +5,20 @@ import dingSound from "../utils/ding.mp3";
 import url from "../utils/url";
 
 const setMove = async () => {
-  const laptop = JSON.parse(localStorage.getItem("laptop"));
-  laptop.laptop.moved = true;
-  console.log(laptop.laptop.moved);
+  const laptop = JSON.parse(localStorage.getItem("laptop")).laptop;
+  const newLaptop = {
+    code: laptop.code,
+    phone: null,
+    moved: true,
+    _id: laptop._id,
+  };
+  console.log(newLaptop);
   const response = await fetch(url + "/connect/updateLaptop", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: laptop,
+    body: newLaptop,
   });
   const data = await response.json(); //updated laptop
   localStorage.setItem("laptop", JSON.stringify(data));
@@ -36,6 +41,7 @@ const TabletAuth = () => {
 
   const handleClick = () => {
     setIsLocked(!isLocked);
+    setMove(); // Temporary
     if (isLocked) {
       motionDetection();
     }
@@ -75,7 +81,7 @@ const TabletAuth = () => {
     <>
       <Box sx={{ marginTop: "20vh" }}>
         <Typography sx={{ fontSize: "14pt", color: "black" }}>
-          Your tablet is {isLocked ? "" : "NOT"} currently tracking movement.
+          Your tablet is currently {isLocked ? "" : "NOT"} tracking movement.
         </Typography>
         <Button
           sx={{

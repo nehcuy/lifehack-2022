@@ -37,9 +37,6 @@ const TabletLanding = () => {
     window.location.href = "/tablet-auth";
   };
 
-  // State for code generation
-  const [generateCode, setGenerateCode] = React.useState(false);
-
   return (
     <>
       <Box sx={{ marginTop: "20vh" }}>
